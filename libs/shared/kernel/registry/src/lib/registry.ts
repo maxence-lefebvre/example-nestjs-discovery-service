@@ -1,6 +1,6 @@
 import { Injectable, Logger, OnModuleInit } from '@nestjs/common';
 import { DiscoveryService } from '@nestjs/core';
-import * as _ from 'lodash';
+import iterate from 'iterare';
 
 import { REGISTRY_METADATA_KEY } from './registry.constants';
 
@@ -29,7 +29,7 @@ export class Registry implements OnModuleInit {
   private scanDiscoverableInstanceWrappers(
     wrappers: { metatype: unknown | null; instance: unknown; name: string }[]
   ) {
-    return _(wrappers)
+    return iterate(wrappers)
       .filter(({ metatype }) => metatype && this.getMetadata(metatype))
       .reduce((acc, { metatype, instance, name }) => {
         const type = this.getMetadata(metatype);
