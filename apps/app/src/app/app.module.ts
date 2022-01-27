@@ -7,11 +7,14 @@ import { FoobarDataModule } from '@org/features/foobar/data-access';
   imports: [
     LoggerModule.forRoot({
       pinoHttp: {
-        transport: process.env.NODE_ENV !== 'production' ? { target: 'pino-pretty' } : undefined,
-      }
+        transport:
+          process.env.NODE_ENV !== 'production'
+            ? { target: 'pino-pretty' }
+            : undefined,
+      },
     }),
     MonitoringModule,
-    FoobarDataModule
+    FoobarDataModule,
   ],
   controllers: [],
   providers: [],
