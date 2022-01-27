@@ -1,0 +1,23 @@
+{
+  "root": "libs/features/foobar/data-access",
+  "sourceRoot": "libs/features/foobar/data-access/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/features/foobar/data-access/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/features/foobar/data-access"],
+      "options": {
+        "jestConfig": "libs/features/foobar/data-access/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

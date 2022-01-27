@@ -1,0 +1,23 @@
+{
+  "root": "libs/shared/kernel/monitoring",
+  "sourceRoot": "libs/shared/kernel/monitoring/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/shared/kernel/monitoring/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/shared/kernel/monitoring"],
+      "options": {
+        "jestConfig": "libs/shared/kernel/monitoring/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

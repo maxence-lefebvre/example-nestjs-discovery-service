@@ -14,7 +14,21 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@org/features/foobar/data-access": [
+        "libs/features/foobar/data-access/src/index.ts"
+      ],
+      "@org/shared/data-access": ["libs/shared/data-access/src/index.ts"],
+      "@org/shared/kernel/monitoring": [
+        "libs/shared/kernel/monitoring/src/index.ts"
+      ],
+      "@org/shared/kernel/registry": [
+        "libs/shared/kernel/registry/src/index.ts"
+      ],
+      "@org/shared/lang-extensions/typescript": [
+        "libs/shared/lang-extensions/typescript/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

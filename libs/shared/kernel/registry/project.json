@@ -1,0 +1,23 @@
+{
+  "root": "libs/shared/kernel/registry",
+  "sourceRoot": "libs/shared/kernel/registry/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/shared/kernel/registry/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/shared/kernel/registry"],
+      "options": {
+        "jestConfig": "libs/shared/kernel/registry/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

@@ -1,6 +1,11 @@
 {
   "version": 2,
   "projects": {
-    "app": "apps/app"
+    "app": "apps/app",
+    "features-foobar-data-access": "libs/features/foobar/data-access",
+    "shared-data-access": "libs/shared/data-access",
+    "shared-kernel-monitoring": "libs/shared/kernel/monitoring",
+    "shared-kernel-registry": "libs/shared/kernel/registry",
+    "shared-lang-extensions-typescript": "libs/shared/lang-extensions/typescript"
   }
 }

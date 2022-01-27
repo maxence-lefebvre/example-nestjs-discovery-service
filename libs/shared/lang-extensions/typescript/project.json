@@ -1,0 +1,23 @@
+{
+  "root": "libs/shared/lang-extensions/typescript",
+  "sourceRoot": "libs/shared/lang-extensions/typescript/src",
+  "projectType": "library",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/shared/lang-extensions/typescript/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/shared/lang-extensions/typescript"],
+      "options": {
+        "jestConfig": "libs/shared/lang-extensions/typescript/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
